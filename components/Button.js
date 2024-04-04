@@ -5,10 +5,14 @@ import tw from 'twrnc'
 
 const Button = (props) => {
   return (
-    <TouchableOpacity style={tw.style('items-center justify-center', { ...styles.btn, ...props.style})} >
+    <TouchableOpacity 
+      style={tw.style('items-center justify-center', { ...styles.btn, ...props.style})} 
+      onPress={props.onPress}>
+
       <Text style={tw.style({...FONTS.body2, fontFamily: "medium", color: COLORS.white })}>
             {props.title}
       </Text>
+      
     </TouchableOpacity>
   )
 };
